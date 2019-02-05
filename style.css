@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    margin-right: -320px;
+    width: 100%;
+    position: relative;
+}
+.container, nav{
+    float: left;
+}
+/* Header */
+header{
+    width: 100%;
+    overflow: hidden;
+}
+.menu, .logo{
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+}
+
+.menu{
+    float: left;
+}
+.logo{
+    float: right;
+    background-color: green;
+}
+.menu_1{
+    background-color: blue;
+    position: relative;
+    /* z-index: 10; */
+    /* transition: z-index 2s; */
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+.menu_2{
+    background-color: red;
+}
+
+.menu_1 .ham{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: 0 auto; */
+    width: 20px;
+    height: 3px;
+    background-color: black;
+}
+.menu_1 .ham:before, .menu_1 .ham:after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    backface-visibility: hidden;
+}
+.menu_1 .ham:before{
+    top: -5px;
+}
+.menu_1 .ham:after{
+    top: 5px;
+}
+.nav_hide{
+    margin-left: -320px;
+}
+.nav_hide, .nav_show{
+    height: 100vh;
+    width: 320px;
+    background-color: yellow;
+    transition: margin-left .256s;
+}
+.nav_show{
+    margin-left: 0;
+}
+
+.overlay_add{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* display: block; */
+    background-color: rgba(0, 0, 0, .5);
+    transition: background-color .256s;
+}
+@media only screen and (min-width: 500px){
+
+}
