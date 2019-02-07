@@ -1,0 +1,15 @@
+nav{
+    float: left;
+}
+.nav_hide{
+    margin-left: -320px;
+}
+.nav_hide, .nav_show{
+    height: 100vh;
+    width: 320px;
+    background-color: yellow;
+    transition: margin-left .256s;
+}
+.nav_show{
+    margin-left: 0;
+}

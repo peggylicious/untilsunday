@@ -9,9 +9,12 @@ document.addEventListener("click", function(){
             leftNav.classList.toggle("nav_show");
             overlay.classList.toggle('overlay_add');
             menu_1.style.zIndex = "10";
+            document.getElementsByTagName('body')[0].classList.toggle('bdy_hide')
+            // document.getElementsByTagName('body')[0].style.overflow = "hidden";
         }else{
             leftNav.classList.toggle("nav_show");
             overlay.classList.toggle('overlay_add');
+            document.getElementsByTagName('body')[0].classList.toggle('bdy_hide')
         }
     }
 })

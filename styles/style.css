@@ -1,23 +1,43 @@
+@import url("hero.css");
+@import url("leftnav.css");
+@import url("main_box.css");
+@import url("stories.css");
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 body{
+    /* overflow: hidden; */
+    /* overflow-y: hidden; */
+}
+.bdy_hide{
     overflow: hidden;
 }
+.header_hero{
+    position: relative;
+    background-size: cover;
+    background-image: url("../images/general/untilsunday-background.jpg")
+}
+
 .container{
     margin-right: -320px;
     width: 100%;
     position: relative;
 }
-.container, nav{
+.container{
     float: left;
 }
 /* Header */
-header{
+.main_header{
+    position: absolute;
     width: 100%;
     overflow: hidden;
+    border: 1px solid #fff;
 }
 .menu, .logo{
     height: 80px;
@@ -26,24 +46,30 @@ header{
 }
 
 .menu{
-    float: left;
+    /* float: left; */
 }
 .logo{
-    float: right;
+    float: left;
     background-color: green;
+    border: 1px solid #fff;
+}
+.logo img{
+    display: inline-block;
+    object-fit: contain;
+    vertical-align: middle;
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    background-color: red;
 }
 .menu_1{
     background-color: blue;
     position: relative;
-    /* z-index: 10; */
-    /* transition: z-index 2s; */
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
+    float: left;
 }
 .menu_2{
-    background-color: red;
+    background-color: yellow;
+    float: right;
 }
 
 .menu_1 .ham{
@@ -70,18 +96,7 @@ header{
 .menu_1 .ham:after{
     top: 5px;
 }
-.nav_hide{
-    margin-left: -320px;
-}
-.nav_hide, .nav_show{
-    height: 100vh;
-    width: 320px;
-    background-color: yellow;
-    transition: margin-left .256s;
-}
-.nav_show{
-    margin-left: 0;
-}
+
 
 .overlay_add{
     position: absolute;
@@ -90,9 +105,10 @@ header{
     width: 100%;
     height: 100%;
     /* display: block; */
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, .5);
     transition: background-color .256s;
 }
+
 @media only screen and (min-width: 500px){
 
 }
