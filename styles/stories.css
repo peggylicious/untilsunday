@@ -1,47 +1,117 @@
 .stories header{
     padding: 10px 0;
 }
+/* article{
+    position: relative;
+} */
 .art_1{
     height: 100vh;
-    background-image: url("../images/articles/smashing_book.jpg");
+    background-image: url("../images/articles/untilsunday_smashing_book.jpg");
+}
+article{
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
-    transition: background-color 6s;
+    transition: background-color .6s;
 }
 a.art_link{
     display: block;
     height: 100%;
     width: 100%;
 }
-.art_1 div{
+article > div{
     position: absolute;
-    top: 100%;
-    padding: 40px;
-    transition: top .6s;
+    bottom: 50px;
+    height: 50px;
+    width: 100%;
+    padding-left: 40px;
+    /* background-color: green; */
+    /* bottom: -100px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* visibility: hidden; */
+    /* transition: top .6s; */
+    /* transition: bottom 350ms; */
+    overflow: hidden;
 
+    /* background-color: pink; */
 }
-.art_1 h3{
+article > div div{
+    position: absolute;
+    bottom: -50px;
+    height: 50px;
+    /* background-color: yellow; */
+    transition: all .256s;
+    opacity: 0;
+}
+article h3{
     margin-bottom: 10px;
 }
-.art_1 h3 a{
+article h3 a{
     font-size: 20px;
     font-weight: 500;
 }
-.art_1 span a{
+article span a{
     font-size: 13px;
 }
-.art_1 a{
+article a{
     color: #fff;
     text-decoration: none;
 }
-.art_1:hover{
+article:hover{
     background-color: #c02942;
     background-blend-mode: multiply;
     /* transition: all .6s; */
 }
-.art_1:hover div{
-    top: 80%;
-    transition: all 350ms;
+article:hover > div div{
+    bottom: 0;
+    opacity: 1;
+}
+
+.stories > .art_container{
+    /* height: 100vh; */
+    overflow: hidden;
+}
+
+.stories > div .art_2,
+.stories > div .art_3{
+    height: 50vh;
+}
+.stories > div .art_2{
+    /* background-color: red; */
+    background-image: url("../images/articles/untilsunday_flyers.jpg");
+
+}
+.stories > div .art_3{
+    /* background-color: yellow; */
+    background-image: url("../images/articles/untilsunday_city_of_horten.jpg");
+}
+.art_4, .art_6{
+    height: 50vh;
+    /* background-color: red; */
+}
+.art_4{
+    background-image: url("../images/articles/untilsunday_little_stories.jpg");
+}
+.art_5{
+    height: 100vh;
+    /* background-color: grey; */
+    background-image: url("../images/articles/untilsunday_greetings_card.jpg");
+}
+.art_6{
+    /* background-color: yellow; */
+    background-image: url("../images/articles/untilsunday_questions_game.jpg");
+}
+@media only screen and (min-width: 767px){
+    .art_1, .art_4, .art_6{
+        float: left;
+        width: 50%;
+    }
+    .art_2, .art_3, .art_5{
+        float: right;
+        width: 50%;
+    }
 }
