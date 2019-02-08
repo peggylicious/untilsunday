@@ -94,15 +94,25 @@ a.art_link{
     background-image: url("../images/articles/untilsunday_questions_game.jpg");
 }
 
-/* Portfolio */
+/* connect */
 
-.portfolio{
+.connect{
     height: 70px;
     line-height: 70px;
     padding: 0 20px;
     text-align: right;
-    font-size: 14px;
     color: #c02942;
+    border-top: 1px solid #eee;
+
+}
+.connect a{
+    text-decoration: none;
+    color: #c02942;
+    font-size: 14px;
+}
+.connect a:hover{
+    color: #811c2c;
+    outline: none;
 }
 @media only screen and (min-width: 767px){
     .art_1, .art_4, .art_6{
