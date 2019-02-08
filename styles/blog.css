@@ -52,17 +52,11 @@
     position: relative;
     color: #c02942;
 }
-
+.blog article:hover footer span:last-child{
+    opacity: 1;
+}
+.blog article:hover header h3 a{
+    color: #c02942;
+}
 @media only screen and (min-width: 767px){
-    .blog article:hover header h3 a{
-        color: #c02942;
-    }
-    .blog article:hover footer span:last-child{
-        /* display: block; */
-        opacity: 1;
-    }
-    .blog .last_article:hover footer span:last-child i{
-        /* display: inline; */
-        /* opacity: 1; */
-    }
 }
