@@ -58,5 +58,18 @@
 .blog article:hover header h3 a{
     color: #c02942;
 }
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: 768px){
+    .blog{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .blog header{
+        width: 100%;
+    }
+    .blog article{
+        width: 33.33%;
+    }
+    .blog  article:nth-child(2), .blog  article:nth-child(3){
+        border-right: 1px solid #eee;
+    }
 }

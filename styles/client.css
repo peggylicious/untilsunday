@@ -1,0 +1,69 @@
+.client > div{
+    width: 100%;
+    /* background-color: red; */
+    overflow: hidden;
+    /* white-space: nowrap; */
+    height: 240px;
+    /* line-height: 240px; */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.client div div{
+    float: left;
+    height: 240px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client div div a{
+    /* background-color: brown; */
+    display: block;
+}
+.client img{
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    background-color: yellow;
+    object-fit: cover;
+    opacity: 0.5;
+    zoom: 1;
+}
+.client img:hover{
+    opacity: 1;
+}
+#col-1, #col-2, #col-3{
+    border-right: 1px solid #eee;
+
+}
+
+/* Client */
+.message{
+    position: relative;
+}
+.message a{
+    background-color: #c02942;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    height: 160px;
+    line-height: 160px;
+    text-align: center;
+    transition: backgroun-color .6s;
+    /* transition:  */
+}
+.message a:hover{
+    background-color: #962034;
+}
+
+@media only screen and (min-width: 480px){
+    .client div div{
+        width: 33.33%;
+    }
+}
+@media only screen and (min-width: 769px){
+    .client div div{
+        width: 25%;
+    }
+}

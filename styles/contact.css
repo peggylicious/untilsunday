@@ -1,0 +1,52 @@
+.contact{
+    background-color: #333333;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact header h3{
+    height: 50px;
+    line-height: 50px;
+}
+.contact div{
+    min-height: 317px;
+    padding: 80px 40px;
+}
+.contact div, .contact footer{
+    color: #999999;
+    border-top: 1px solid #222222;
+    /* min-height: 317px; */
+    text-align: center;
+    /* font-size: 14px; */
+}
+.contact p{
+    font-size: 14px;
+}
+.contact a{
+    color: #999999;
+    outline: none;
+    text-decoration: none;
+    /* text-decoration-color: rgba(255, 255, 255, 0.2); */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.contact a:hover{
+    color: #fff;
+}
+.contact header{
+    width: 100%;
+}
+.contact_us, .newsletter{
+    width: 50%;
+    /* text-align: center; */
+}
+.contact .latest_tweets{
+    padding: 50px 40px 80px;
+}
+.contact footer{
+    padding: 40px 20px;
+}
+.contact footer small{
+    display: block;
+    font-size: 100%;
+    margin-bottom: 5px;
+}

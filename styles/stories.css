@@ -114,7 +114,7 @@ a.art_link{
     color: #811c2c;
     outline: none;
 }
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: 768px){
     .art_1, .art_4, .art_6{
         float: left;
         width: 50%;

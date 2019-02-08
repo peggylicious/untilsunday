@@ -3,6 +3,9 @@
 @import url("main_box.css");
 @import url("stories.css");
 @import url("blog.css");
+@import url("client.css");
+@import url("contact.css");
+
 
 *{
     padding: 0;
@@ -55,9 +58,11 @@ body{
     float: left;
     background-color: green;
     border: 1px solid #fff;
+    display: flex;
+    align-items: center;
 }
 .logo img{
-    display: inline-block;
+    display: block;
     object-fit: contain;
     vertical-align: middle;
     height: 50px;
