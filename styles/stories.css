@@ -14,7 +14,7 @@ article{
     background-position: center center;
     /* overflow: hidden; */
     position: relative;
-    transition: background-color .6s;
+    transition: background-color 350ms;
 }
 a.art_link{
     display: block;
@@ -23,32 +23,21 @@ a.art_link{
 }
 article > div{
     position: absolute;
-    bottom: 50px;
-    height: 50px;
-    width: 100%;
-    padding-left: 40px;
-    /* background-color: green; */
-    /* bottom: -100px; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* visibility: hidden; */
-    /* transition: top .6s; */
-    /* transition: bottom 350ms; */
+    bottom: 0px;
+    padding: 40px;
+    background-color: green;
     overflow: hidden;
-
-    /* background-color: pink; */
 }
 article > div div{
-    position: absolute;
-    bottom: -50px;
-    height: 50px;
+    position: relative;
+    bottom: -20px;
+    width: 100%;
     /* background-color: yellow; */
-    transition: all .256s;
+    transition: all 350ms;
     opacity: 0;
 }
 article h3{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 article h3 a{
     font-size: 20px;
@@ -64,7 +53,6 @@ article a{
 article:hover{
     background-color: #c02942;
     background-blend-mode: multiply;
-    /* transition: all .6s; */
 }
 article:hover > div div{
     bottom: 0;
