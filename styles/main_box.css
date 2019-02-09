@@ -2,7 +2,16 @@
 .main{
     /* position: relative; */
 }
-section{
+.main header h3{
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    padding: 20px 33px;
+    color: #333;
+    font-weight: 600;
+}
+.main section{
+    /* padding: 80px 5%; */
     /* background-color: blue; */
 }
 .main header{
@@ -12,9 +21,8 @@ section{
 .sliders{
     width: 100%;
     height: 450px;
-    background-color: yellow;
+    /* background-color: yellow; */
     overflow: hidden;
-    border: 2px solid black;
     position: relative;
 }
 .slider_2{
@@ -26,14 +34,15 @@ section{
 section .up, section .down{
     /* height: 50px; */
     width: 100%;
-    background-color: #fff;
+    /* height: 170px; */
+    /* background-color: #fff; */
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 section .up{
-    top: 105px;
+    top: 80px;
 }
 .up img{
     height: 120px;
@@ -42,9 +51,8 @@ section .up{
     margin: 0 auto;
 }
 section .down{
-    background-color: red;
-    top: 50%;
-    height: 120px;
+    /* background-color: red; */
+    top: 200px;
 }
 section:hover .up{
     animation-name: slide-down;
@@ -67,20 +75,45 @@ section:hover .down{
 
 .content{
     text-align: center;
-    background-color: yellow;
+    /* background-color: yellow; */
     /* width: 90%; */
-    padding: 0 10px;
+    padding: 0 30px;
 }
 .sliders a{
-    color: #913947;
-    font-size: .8em;
+    color: #c02942;
+    font-size: 11px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    line-height: 1.42857143;
+}
+.sliders h3{
+    margin: 30px 0 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.1;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.sliders p{
+    padding-bottom: 20px;
+    line-height: 1.42857143;
+    text-align: center;
+}
+.slider_1 h3, .slider_1 p{
+    color: #333;
+}
+.slider_2{
+    background-color: #333;
 }
 .slider_2, .slider_3{
     color: #fff;
 }
+.slider_2 p, .slider_3 p{
+    font-weight: 500;
+}
 .slider_2 .content a,
 .slider_3 .content a{
     color: #fff;
+    font-weight: 700;
 }
 @media only screen and (min-width: 768px){
     .main{
@@ -92,5 +125,10 @@ section:hover .down{
     }
     section{
         width: 33.33%;
+    }
+}
+@media only screen and (min-width: 992px){
+    .main header h3{
+        padding: 40px 33px;
     }
 }

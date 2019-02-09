@@ -1,8 +1,13 @@
-.blog > header h4, .client > header h4{
-    height: 50px;
-    line-height: 50px;
+.blog{
+    font-family: 'Karla', sans-serif;
+}
+.blog > header h4{
+    padding: 20px 20px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    letter-spacing: 1.5px;
+    font-size: 1.13em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .blog a{
     text-decoration: none;
@@ -19,6 +24,8 @@
     font-weight: 500;
 }
 .blog article header h3 a{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
     color: #000;
     transition: color .6s;
 }
@@ -34,6 +41,7 @@
     /* background-color: green; */
 }
 .blog article footer span{
+    font-family: 'Karla', sans-serif;
     font-size: 12px;
 }
 .blog .last_article footer i{
@@ -46,11 +54,14 @@
     font-weight: 700;
     opacity: 0;
     transition: all .6s;
-
 }
 .blog footer span:last-child a{
     position: relative;
     color: #c02942;
+    transition: all .6s;
+}
+.blog footer span:hover:last-child a{
+        color: #811c2c;
 }
 .blog article:hover footer span:last-child{
     opacity: 1;
@@ -65,6 +76,9 @@
     }
     .blog header{
         width: 100%;
+    }
+    .blog header h4{
+        padding: 40px 33px;
     }
     .blog article{
         width: 33.33%;
