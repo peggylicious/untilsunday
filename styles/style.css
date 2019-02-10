@@ -15,7 +15,7 @@
 html{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 10px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
 }
 body{
     font-family: 'Karla', sans-serif;
@@ -33,24 +33,32 @@ body{
 }
 
 .container{
-    margin-right: -320px;
     width: 100%;
     position: relative;
+    transition: left 6s;
+    left: 0px;
 }
-.container{
-    float: left;
+.move_cont{
+    left: 320px;
+    transition: left 6s;
 }
+.move_cont_right{
+    left: -320px;
+    transition: left 6s;
+}
+
 /* Header */
 .main_header{
     position: absolute;
     width: 100%;
     overflow: hidden;
-    border: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .menu, .logo{
     height: 80px;
     width: 80px;
     line-height: 80px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .menu{
@@ -58,67 +66,79 @@ body{
 }
 .logo{
     float: left;
-    background-color: green;
-    border: 1px solid #fff;
-    /* display: flex;
-    align-items: center; */
+    /* background-color: green; */
 }
 .logo img{
-    display: block;
-    line-height: 1;
-
     object-fit: contain;
-    /* vertical-align: middle; */
-    /* height: 50px;
-    width: 50px; */
+    vertical-align: middle;
     margin: 0 auto;
-    background-color: red;
+    /* background-color: red; */
 }
 .logo a{
     display: inline-block;
-    /* vertical-align: middle; */
-    background-color: black;
+    background-color: transparent;
     height: 80px;
     line-height: 80px;
-    /* height: 100%; */
+    text-align: center;
     width: 100%;
-    line-height: 1;
 }
-.menu_1{
-    background-color: blue;
+#menu_1{
+    /* background-color: transparent; */
+}
+.menu_1_copy{
+    background-color: #000;
+    z-index: 10;
+}
+.menu{
+    /* background-color: blue; */
     position: relative;
     float: left;
+    text-align: center;
 }
-.menu_2{
-    background-color: yellow;
+#menu_2{
+    /* background-color: yellow; */
     float: right;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.menu_1 .ham{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /* margin: 0 auto; */
-    width: 20px;
-    height: 3px;
-    background-color: black;
+.menu .ham, .menu .special{
+    position: relative;
+    display: inline-block;
+    width: 13px;
+    height: 2px;
+    background-color: #fff;
 }
-.menu_1 .ham:before, .menu_1 .ham:after{
+.menu .ham:before, .menu .ham:after,
+.menu .special:before, .menu .special:after{
+    display: block;
     content: "";
     position: absolute;
-    width: 20px;
-    height: 3px;
+    width: 13px;
+    height: 2px;
     background-color: white;
     backface-visibility: hidden;
 }
-.menu_1 .ham:before{
-    top: -5px;
+.menu .ham:before{
+    top: -4px;
 }
-.menu_1 .ham:after{
-    top: 5px;
+.menu .ham:after{
+    top: 4px;
 }
-
+#menu_2 .ham, #menu_2 .ham:before, #menu_2 .ham:after{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+.menu .special:before{
+    top:0;
+    /* left: 0; */
+    transform: rotate(45deg);
+}
+.menu .special:after{
+    top:0;
+    /* left: 0; */
+    transform: rotate(-45deg);
+}
 
 .overlay_add{
     position: absolute;
@@ -131,6 +151,20 @@ body{
     transition: background-color .256s;
 }
 
-@media only screen and (min-width: 500px){
-
+@media only screen and (min-width: 768px){
+    .menu .ham, .menu .ham:before, .menu .ham:after, .menu .special, .menu .special:before, .menu .special:after{
+        height: 2px;
+        width: 20px;
+    }
+    .menu .ham:before{
+        top: -8px;
+    }
+    .menu .ham:after{
+        top: 8px;
+    }
+    #menu_2 .ham, #menu_2 .ham:before, #menu_2 .ham:after{
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+    }
 }

@@ -1,15 +1,19 @@
-nav{
-    float: left;
-}
-.nav_hide{
-    margin-left: -320px;
-}
-.nav_hide, .nav_show{
+.left_nav{
+    position: absolute;
     height: 100vh;
-    width: 320px;
     background-color: yellow;
-    transition: margin-left .256s;
+    left: -320px;
+    width: 320px;
+    transition: all 6s;
+
 }
-.nav_show{
-    margin-left: 0;
+
+.right_nav{
+    position: absolute;
+    height: 100vh;
+    background-color: yellow;
+    right: -320px;
+    top: 0;
+    width: 320px;
+    transition: all 6s;
 }
