@@ -62,11 +62,11 @@ function checkPresence(){
 }
 // When user resizes browser window by dragging it L or  R
 window.addEventListener("resize", function(e){
-    if (window.innerWidth > 500){
-        menu_1.style.zIndex = "10";
+    if (window.innerWidth > 500 && leftNav.style.left === "0px"){
+        // menu_1.style.zIndex = "10";
         menu_1.classList.add("menu_1_copy");
     }else{
-        menu_1.style.zIndex = "0";
+        // menu_1.style.zIndex = "0";
         menu_1.classList.remove("menu_1_copy");
     }
 })
