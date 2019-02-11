@@ -7,7 +7,7 @@
     height: 80px;
     width: 80px;
     line-height: 80px;
-    background-color: red;
+    background-color: #000;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 .left_nav header .left_logo{
@@ -17,6 +17,7 @@
     position: relative;
     text-align: center;
     float: right;
+    visibility: visible;
 }
 .left_menu .left_ham{
     position: relative;
@@ -79,7 +80,6 @@
     transition: all 6s;
 
 }
-
 .right_nav{
     position: absolute;
     height: 100vh;
@@ -88,4 +88,13 @@
     top: 0;
     width: 320px;
     transition: all 6s;
+}
+
+
+
+/* Queries */
+@media only screen and (min-width: 768px){
+    .left_nav header .left_menu{
+        visibility: hidden;
+    }
 }

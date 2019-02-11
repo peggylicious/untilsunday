@@ -6,37 +6,27 @@ var container = document.querySelector(".container"),
     overlay = document.querySelector(".overlay"),
     leftClose = document.getElementById("close_1");
 
-document.addEventListener("click", function(){
+document.addEventListener("click", function(e){
     // Left Navigation Off Canvas
-    if (event.target.matches('#menu_1') || event.target.matches('#close_1')){
-        if (window.innerWidth > 500){
+    if (event.target.matches('#menu_1') || event.target.matches('#close_1') || event.target.matches('.left_ham')){
+        if (window.innerWidth > 767){
             menu_1.classList.toggle("menu_1_copy");
             checkLeftNav();
-            // menu_1.style.zIndex = "10";
-            // menu_1.style.backgroundColor = "#000";
         }else{
             checkLeftNav();
         }
     }
 
     // Right Navigation
-    // if (event.target.matches('#menu_2')){
-    //     if (window.innerWidth > 500){
-    //         if (window.getComputedStyle(rightNav).right === "-320px") {
-    //             rightNav.style.right = "0px";
-    //             container.classList.toggle("move_cont_right");
-    //             overlay.classList.toggle('overlay_add');
-    //             menu_2.style.zIndex = "10";
-    //             document.getElementsByTagName('body')[0].classList.toggle('bdy_hide')
-    //         }
-    //         else{
-    //             rightNav.style.right = "-320px";
-    //             container.classList.toggle("move_cont_right");
-    //             overlay.classList.toggle('overlay_add');
-    //             document.getElementsByTagName('body')[0].classList.toggle('bdy_hide')
-    //         }
-    //     }
-    // }
+    if (event.target.matches('#menu_2')){
+        if (window.innerWidth > 767){
+            menu_2.classList.toggle("menu_1_copy");
+            checkRightNav();
+        }else{
+            checkRightNav();
+
+        }
+    }
 })
 
 // Check if style is present
@@ -47,27 +37,43 @@ function checkLeftNav(){
         overlay.classList.toggle('overlay_add');
         document.querySelector(".ham_1").classList.toggle("ham");
         document.querySelector(".ham_1").classList.toggle("special");
-        // menu_1.style.zIndex = "10";
-        // menu_1.style.backgroundColor = "#000";
         document.getElementsByTagName('body')[0].classList.toggle('bdy_hide')
     }else{
         leftNav.style.left = "-320px";
         leftNav.classList.toggle("hide_left_nav");
         container.classList.toggle("move_cont");
         overlay.classList.toggle('overlay_add');
-        // menu_1.style.backgroundColor = "transparent";
         document.getElementsByTagName('body')[0].classList.toggle('bdy_hide');
         document.querySelector(".ham_1").classList.toggle("ham");
         document.querySelector(".ham_1").classList.toggle("special");
     }
 }
+function checkRightNav(){
+    if (window.getComputedStyle(rightNav).right === "-320px") {
+        rightNav.style.right = "0px";
+        container.classList.toggle("move_cont_right");
+        overlay.classList.toggle('overlay_add');
+        // menu_2.style.zIndex = "10";
+        document.getElementsByTagName('body')[0].classList.toggle('bdy_hide')
+    }
+    else{
+        rightNav.style.right = "-320px";
+        container.classList.toggle("move_cont_right");
+        overlay.classList.toggle('overlay_add');
+        document.getElementsByTagName('body')[0].classList.toggle('bdy_hide')
+    }
+}
 // When user resizes browser window by dragging it L or  R
 window.addEventListener("resize", function(e){
-    if (window.innerWidth > 500 && leftNav.style.left === "0px"){
-        // menu_1.style.zIndex = "10";
+    if ((window.innerWidth > 767 && leftNav.style.left === "0px")){
         menu_1.classList.add("menu_1_copy");
     }else{
-        // menu_1.style.zIndex = "0";
         menu_1.classList.remove("menu_1_copy");
     }
+
+    // if(window.innerWidth > 500 && rightNav.style.right === "0px"){
+    //     menu_1.classList.add("menu_1_copy");
+    // }else{
+    //     menu_1.classList.remove("menu_1_copy");
+    // }
 })
