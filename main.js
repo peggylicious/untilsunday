@@ -10,11 +10,11 @@ document.addEventListener("click", function(){
     if (event.target.matches('#menu_1') || event.target.matches('#close_1')){
         if (window.innerWidth > 500){
             menu_1.classList.toggle("menu_1_copy");
-            checkPresence();
+            checkLeftNav();
             // menu_1.style.zIndex = "10";
             // menu_1.style.backgroundColor = "#000";
         }else{
-            checkPresence();
+            checkLeftNav();
         }
     }
 
@@ -39,7 +39,7 @@ document.addEventListener("click", function(){
 })
 
 // Check if style is present
-function checkPresence(){
+function checkLeftNav(){
     if (window.getComputedStyle(leftNav).left === "-320px") {
         container.classList.toggle("move_cont");
         leftNav.style.left = "0";
