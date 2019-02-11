@@ -7,6 +7,7 @@ var container = document.querySelector(".container"),
     leftClose = document.getElementById("close_1");
 
 document.addEventListener("click", function(){
+    // Left Navigation Off Canvas
     if (event.target.matches('#menu_1') || event.target.matches('#close_1')){
         if (window.innerWidth > 500){
             menu_1.classList.toggle("menu_1_copy");

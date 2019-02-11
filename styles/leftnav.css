@@ -1,3 +1,75 @@
+.left_nav header{
+    overflow: hidden;
+    position: relative;
+}
+
+.left_nav header > div{
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    background-color: red;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.left_nav header .left_logo{
+    float: left;
+}
+.left_nav header .left_menu{
+    position: relative;
+    text-align: center;
+    float: right;
+}
+.left_menu .left_ham{
+    position: relative;
+    display: inline-block;
+    width: 13px;
+    height: 2px;
+    background-color: transparent;
+}
+.left_menu .left_ham:before, .left_menu .left_ham:after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 2px;
+    background-color: white;
+    backface-visibility: hidden;
+}
+.left_menu .left_ham:before{
+    top:0;
+    /* left: 0; */
+    transform: rotate(45deg);
+}
+.left_menu .left_ham:after{
+    top:0;
+    /* left: 0; */
+    transform: rotate(-45deg);
+}
+
+/* On hover */
+.left_menu .left_ham:hover:before{
+    transform: rotate(-45deg);
+    background-color: blue;
+    top: -7px;
+}
+.left_menu .left_ham:hover:after{
+    transform: rotate(45deg);
+    background-color: blue;
+    top: 7px;
+}
+.left_menu .left_ham:hover{
+    width: 20px;
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+/* For Javascript */
 .left_nav{
     position: absolute;
     height: 100vh;
