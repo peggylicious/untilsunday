@@ -68,12 +68,21 @@
     transform: rotateX(-90deg);
     cursor: pointer;
 }
-.hero_overlay{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: rgba(192, 41, 66, .5);
+
+
+
+/* Support for Microsoft Edge */
+
+@supports (-ms-ime-align:auto) {
+    .hero_overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        /* background-color: rgba(122, 17, 35, 0.8); */
+        background-color: rgba(136, 2, 25, 0.750);
+
+    }
 }
