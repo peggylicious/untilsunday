@@ -1,5 +1,5 @@
 @import url("hero.css");
-@import url("leftnav.css");
+/* @import url("leftnav.css"); */
 @import url("main_box.css");
 @import url("stories.css");
 @import url("blog.css");
@@ -22,6 +22,8 @@ body{
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-size: 14px;
     line-height: 1.42857143;
+    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 .bdy_hide{
     overflow: hidden;
@@ -35,133 +37,338 @@ body{
 .container{
     width: 100%;
     position: relative;
-    transition: left 6s;
-    left: 0px;
-}
-.move_cont{
-    left: 320px;
-    transition: left 6s;
-}
-.move_cont_right{
-    left: -320px;
-    transition: left 6s;
+    /* transition: left 6s; */
+    transform: translate3d(0, 0, 0);
+    transition: transform 5s;
+    /* left: 0px; */
 }
 
-/* Header */
-.main_header{
+input{
     position: absolute;
-    width: 100%;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    visibility: hidden;
 }
-.menu, .logo{
-    height: 80px;
-    width: 80px;
-    line-height: 80px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.logo{
-    float: left;
-    /* background-color: green; */
-}
-.logo img{
-    object-fit: contain;
-    vertical-align: middle;
-    margin: 0 auto;
-    /* background-color: red; */
-}
-.logo a{
-    display: inline-block;
-    background-color: transparent;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-    width: 100%;
-}
-#menu_1{
-    /* background-color: transparent; */
-}
-.menu_1_copy{
-    background-color: #000;
-    z-index: 10;
-}
-.menu{
-    /* background-color: blue; */
-    position: relative;
-    float: left;
-    text-align: center;
-}
-#menu_2{
-    /* background-color: yellow; */
-    float: right;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.menu .ham, .menu .special{
-    position: relative;
-    display: inline-block;
-    width: 13px;
-    height: 2px;
-    background-color: #fff;
-}
-.menu .ham:before, .menu .ham:after,
-.menu .special:before, .menu .special:after{
-    display: block;
-    content: "";
-    position: absolute;
-    width: 13px;
-    height: 2px;
-    background-color: white;
-    backface-visibility: hidden;
-}
-.menu .ham:before{
-    top: -4px;
-}
-.menu .ham:after{
-    top: 4px;
-}
-#menu_2 .ham, #menu_2 .ham:before, #menu_2 .ham:after{
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-}
-.menu .special:before{
-    top:0;
-    /* left: 0; */
-    transform: rotate(45deg);
-}
-.menu .special:after{
-    top:0;
-    /* left: 0; */
-    transform: rotate(-45deg);
-}
-
-.overlay_add{
+/*Left Off-Canvas */
+.left-offcanvas{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    transform: translate3d(-250px, 0, 0);
+    width: 250px;
     height: 100%;
-    /* display: block; */
+    background-color: yellow;
+    transition: transform 5s;
+    /* z-index: 10; */
+}
+.left-offcanvas header{
+    overflow: hidden;
+}
+nav .left, nav .right{
+    height: 80px;
+    width: 80px;
+    background-color: red;
+}
+nav .left{
+    float: left;
+}
+nav .right{
+    float: right;
+}
+
+.right label{
+    display: block;
+    background-color: green;
+    height: 100%;
+    width: 100%;
+}
+.right label .close{
+    height: 2px;
+    width: 13px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    transition: all 0.3s ease 0s;
+}
+.right label .close:before, .right label .close:after{
+    content: "";
+    height: 2px;
+    width: 13px;
+    position: absolute;
+    background-color: red;
+    transition: all 0.3s ease 0s;
+}
+.right label .close:before{
+    transform: rotate(45deg);
+}
+.right label .close:after{
+    transform: rotate(-45deg);
+}
+/* Checked Left Off-Canvas */
+
+/* Main header */
+.container .main_header{
+    width: 100%;
+    /* background-color: brown; */
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid white;
+}
+.main_header > div{
+    height: 80px;
+    width: 80px;
+    border: 1px solid white;
+    /* background-color: red; */
+}
+.menu_1, .logo{
+    float: left;
+    /* background-color: red; */
+}
+.menu_1{
+    /* background-color: pink; */
+}
+.menu_2{
+    float: right;
+    /* background-color: grey; */
+}
+.menu_1 label{
+    display: block;
+    /* background-color: green; */
+    height: 100%;
+    width: 100%;
+}
+.menu_1 label .ham{
+    height: 2px;
+    width: 13px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+}
+.menu_1 label .ham:before, .menu_1 label .ham:after{
+    content: "";
+    height: 2px;
+    width: 13px;
+    position: absolute;
+    background-color: red;
+    transition: all 0.3s ease 0s;
+
+}
+
+.menu_1 label .ham:before{
+    top: -4px;
+    /* transform: rotate(45deg); */
+}
+.menu_1 label .ham:after{
+    top: 4px;
+    /* transform: rotate(-45deg); */
+}
+
+
+/* Menu 2 Style */
+
+.menu_2 label{
+    display: block;
+    /* background-color: green; */
+    height: 100%;
+    width: 100%;
+}
+.menu_2 label .ham{
+    height: 5px;
+    width: 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+}
+.menu_2 label .ham:before, .menu_2 label .ham:after{
+    content: "";
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.menu_2 label .ham:before{
+    top: -4px;
+    /* transform: rotate(45deg); */
+}
+.menu_2 label .ham:after{
+    top: 4px;
+    /* transform: rotate(-45deg); */
+}
+
+
+
+
+/* ACTIONS */
+input#togglebox:checked ~ .container{
+    transform: translate3d(250px, 0, 0);
+    height: 100vh;
+    overflow: hidden;
+}
+input#togglebox:checked ~ .left-offcanvas{
+    transform: translate3d(0, 0, 0);
+}
+
+input#togglebox_r:checked ~ .container{
+    transform: translate3d(-250px, 0, 0);
+    height: 100vh;
+    overflow: hidden;
+}
+input#togglebox_r:checked ~ .right-offcanvas{
+    transform: translate3d(0, 0, 0);
+}
+input#togglebox:checked ~ .left-offcanvas label,
+input#togglebox_r:checked ~ .right-offcanvas label{
+    background-color: #000;
+}
+
+/* ACTIONS HOVER-STATE */
+
+.left-offcanvas .right label .close:hover{
+    background-color: #c02942;
+}
+.left-offcanvas .right label .close:hover::before{
+    background-color: #c02942;
+    /* left: 0; */
+    top: -7px;
+    transform: rotate(-45deg);
+}
+.left-offcanvas .right label .close:hover::after{
+    background-color: #c02942;
+    /* left: 0; */
+    top: 7px;
+    transform: rotate(45deg);
+}
+.right-offcanvas .right label .close:hover{
+    background-color: #c02942;
+}
+.right-offcanvas .right label .close:hover::before{
+    background-color: #c02942;
+    /* left: 0; */
+    top: -7px;
+    transform: rotate(-45deg);
+}
+.right-offcanvas .right label .close:hover::after{
+    background-color: #c02942;
+    /* left: 0; */
+    top: 7px;
+    transform: rotate(45deg);
+}
+
+
+
+/* Right Off-canvas */
+#right_nav{
+    /* position: relative; */
+    /* transform: translate3d(0px, 0, 0); */
+}
+
+#right_nav header{
+    overflow: hidden;
+}
+.right-offcanvas{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate3d(250px, 0, 0);
+    width: 250px;
+    height: 100%;
+    background-color: yellow;
+    transition: transform 5s;
+    /* z-index: 10; */
+}
+.right-offcanvas .left{
+    float: left;
+}
+.right-offcanvas .right{
+    float: right;
+}
+.overlay{
+    /* position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0; */
+    background-color: transparent;
+    transition: background-color 5s;
+}
+input#togglebox_r:checked ~ .container .overlay,
+input#togglebox:checked ~ .container .overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     background-color: rgba(255, 255, 255, .5);
-    transition: background-color .256s;
 }
 
 @media only screen and (min-width: 768px){
-    .menu .ham, .menu .ham:before, .menu .ham:after, .menu .special, .menu .special:before, .menu .special:after{
-        height: 2px;
+    nav .right{
+        display: none;
+    }
+    /* Menu 1 */
+    .menu_1, .menu_2{
+        position: relative;
+        z-index: 10;
+    }
+    .menu_1 label .ham,
+    .menu_1 label .ham:before,
+    .menu_1 label .ham:after{
         width: 20px;
     }
-    .menu .ham:before{
+    .menu_1 label .ham:before{
         top: -8px;
     }
-    .menu .ham:after{
+    .menu_1 label .ham:after{
         top: 8px;
     }
-    #menu_2 .ham, #menu_2 .ham:before, #menu_2 .ham:after{
-        height: 5px;
-        width: 5px;
-        border-radius: 50%;
+
+    /* Menu 2 */
+    .menu_2 label .ham,
+    .menu_2 label .ham:before,
+    .menu_2 label .ham:after{
+        /* width: 20px; */
+    }
+    .menu_2 label .ham:before{
+        top: -8px;
+    }
+    .menu_2 label .ham:after{
+        top: 8px;
+    }
+    input#togglebox:checked ~ .container .menu_1 label .ham,
+    input#togglebox_r:checked ~ .container .menu_2 label .ham        {
+        background-color: transparent;
+    }
+    input#togglebox_r:checked ~ .container .menu_2 label .ham,
+    input#togglebox_r:checked ~ .container .menu_2 label .ham:before,
+    input#togglebox_r:checked ~ .container .menu_2 label .ham:after{
+        /* border-radius: 0; */
+        width: 20px;
+        height: 2px;
+    }
+    /* Checked Action */
+    input#togglebox:checked ~ .container .menu_1 label .ham:before,
+    input#togglebox_r:checked ~ .container .menu_2 label .ham:before{
+        top: 0;
+        transform: rotate(45deg);
+    }
+    input#togglebox:checked ~ .container .menu_1 label .ham:after,
+    input#togglebox_r:checked ~ .container .menu_2 label .ham:after{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    /* Change label container onclick */
+    input#togglebox:checked ~ .container .menu_1 label,
+    input#togglebox_r:checked ~ .container .menu_2 label{
+        background-color: #000;
     }
 }
