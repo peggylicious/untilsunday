@@ -1,100 +1,62 @@
-.left_nav header{
-    overflow: hidden;
-    position: relative;
+.left-offcanvas{
+    overflow-y: auto;
+}
+.left-offcanvas .logo{
+    border: none;
 }
 
-.left_nav header > div{
-    height: 80px;
-    width: 80px;
-    line-height: 80px;
-    background-color: #000;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-.left_nav header .left_logo{
-    float: left;
-}
-.left_nav header .left_menu{
+/* Unordered List */
+.left-offcanvas > ul > li{
     position: relative;
-    text-align: center;
-    float: right;
-    visibility: visible;
+    padding-right: 20px;
+    padding-left: 20px;
 }
-.left_menu .left_ham{
+.left-offcanvas ul li{
+    list-style-type: none;
+}
+.left-offcanvas> ul > li a:before,
+.left-offcanvas > ul > li:first-child a:before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 20px;
+    top: 10px;
+    bottom: 10px;
+    left: -20px;
+    background-color: transparent;
+    transition: all 350ms;
+}
+.left-offcanvas > ul > li a:hover:before,
+.left-offcanvas > ul > li:first-child a:before{
+    background-color: #fff;
+}
+
+.left-offcanvas > ul > li > a{
     position: relative;
     display: inline-block;
-    width: 13px;
-    height: 2px;
-    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    transition: all 350ms;
 }
-.left_menu .left_ham:before, .left_menu .left_ham:after{
-    display: block;
-    content: "";
-    position: absolute;
-    width: 13px;
-    height: 2px;
-    background-color: white;
-    backface-visibility: hidden;
-}
-.left_menu .left_ham:before{
-    top:0;
-    /* left: 0; */
-    transform: rotate(45deg);
-}
-.left_menu .left_ham:after{
-    top:0;
-    /* left: 0; */
-    transform: rotate(-45deg);
+.left-offcanvas > ul > li ul{
+    min-width: 160px;
+    z-index: 1000px;
 }
 
-/* On hover */
-.left_menu .left_ham:hover:before{
-    transform: rotate(-45deg);
-    background-color: blue;
-    top: -7px;
-}
-.left_menu .left_ham:hover:after{
-    transform: rotate(45deg);
-    background-color: blue;
-    top: 7px;
-}
-.left_menu .left_ham:hover{
-    width: 20px;
-    background-color: blue;
+.other_list li a{
+    color: #999;
+    text-decoration: none;
+    transition: all 350ms;
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 14px;
 }
 
-
-
-
-
-
-
-
-
-/* For Javascript */
-.left_nav{
-    position: absolute;
-    height: 100vh;
-    background-color: yellow;
-    left: -320px;
-    width: 320px;
-    transition: all 6s;
-
-}
-.right_nav{
-    position: absolute;
-    height: 100vh;
-    background-color: yellow;
-    right: -320px;
-    top: 0;
-    width: 320px;
-    transition: all 6s;
-}
-
-
-
-/* Queries */
-@media only screen and (min-width: 768px){
-    .left_nav header .left_menu{
-        visibility: hidden;
-    }
+.other_list li a:hover{
+    color: #fff;
+    text-decoration: none;
 }
