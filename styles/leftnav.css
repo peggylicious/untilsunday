@@ -5,7 +5,7 @@
     border: none;
 }
 
-/* Unordered List */
+/* Left offcanvas - Unordered List */
 .left-offcanvas > ul > li{
     position: relative;
     padding-right: 20px;
@@ -59,4 +59,42 @@
 .other_list li a:hover{
     color: #fff;
     text-decoration: none;
+}
+
+
+/* RIGHT offcanvas - Unordered List */
+
+.right-offcanvas .left h3{
+    color: #fff;
+}
+.right-offcanvas .left h3 span{
+    display: inline-block;
+    line-height: 80px;
+}
+.right-offcanvas .pop-tags{
+    overflow: hidden;
+    /* background-color: green; */
+    padding: 0 20px 100px 20px;
+}
+.right-offcanvas .pop-tags li{
+    list-style-type: none;
+    float: left;
+    margin: 0 5px 5px 0;
+}
+.right-offcanvas .pop-tags li a{
+    display: inline-block;
+    color: #999;
+    text-decoration: none;
+    border: 1px solid #333333;
+    padding: 5px 10px;
+    transition: all 350ms;
+}
+.right-offcanvas .pop-tags li a:hover{
+    background: #c02942 !important;
+    border-color: #c02942 !important;
+    color: #fff;
+}
+
+.right-offcanvas h3 span{
+    color: #fff;
 }

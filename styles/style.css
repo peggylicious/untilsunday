@@ -123,9 +123,7 @@ nav .right{
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     /* background-color: red; */
 }
-.menu_1{
-    /* background-color: pink; */
-}
+
 .menu_2{
     float: right;
     /* background-color: grey; */
@@ -297,10 +295,12 @@ input#togglebox_r:checked ~ .right-offcanvas label{
     height: 100%;
     background-color: #000;
     transition: transform 0.5s;
+    padding: 6PX 12PX;
     /* z-index: 10; */
 }
 .right-offcanvas .left{
     float: left;
+    width: auto;
 }
 .right-offcanvas .right{
     float: right;
@@ -341,11 +341,7 @@ input#togglebox:checked ~ .container .overlay{
     }
 
     /* Menu 2 */
-    .menu_2 label .ham,
-    .menu_2 label .ham:before,
-    .menu_2 label .ham:after{
-        /* width: 20px; */
-    }
+
     .menu_2 label .ham:before{
         top: -8px;
     }
