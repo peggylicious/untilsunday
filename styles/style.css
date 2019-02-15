@@ -52,8 +52,8 @@ input{
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate3d(-300px, 0, 0);
-    width: 300px;
+    transform: translate3d(-320px, 0, 0);
+    width: 320px;
     height: 100%;
     background-color: #000;
     transition: transform 0.5s;
@@ -224,7 +224,7 @@ nav .right{
 
 /* ACTIONS */
 input#togglebox:checked ~ .container{
-    transform: translate3d(300px, 0, 0);
+    transform: translate3d(320px, 0, 0);
     height: 100vh;
     overflow: hidden;
 }
@@ -233,7 +233,7 @@ input#togglebox:checked ~ .left-offcanvas{
 }
 
 input#togglebox_r:checked ~ .container{
-    transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-320px, 0, 0);
     height: 100vh;
     overflow: hidden;
 }
@@ -290,8 +290,8 @@ input#togglebox_r:checked ~ .right-offcanvas label{
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate3d(300px, 0, 0);
-    width: 300px;
+    transform: translate3d(320px, 0, 0);
+    width: 320px;
     height: 100%;
     background-color: #000;
     transition: transform 0.5s;
