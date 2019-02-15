@@ -52,8 +52,8 @@ input{
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate3d(-250px, 0, 0);
-    width: 250px;
+    transform: translate3d(-300px, 0, 0);
+    width: 300px;
     height: 100%;
     background-color: #000;
     transition: transform 0.5s;
@@ -158,11 +158,27 @@ nav .right{
 
 .menu_1 label .ham:before{
     top: -4px;
-    /* transform: rotate(45deg); */
+    transition: all 0.3s ease 0s;
 }
 .menu_1 label .ham:after{
     top: 4px;
-    /* transform: rotate(-45deg); */
+    transition: all 0.3s ease 0s;
+}
+
+/* LOGO */
+
+.logo img{
+    object-fit: contain;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+.logo a{
+    display: inline-block;
+    background-color: transparent;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: 100%;
 }
 
 
@@ -198,11 +214,11 @@ nav .right{
 
 .menu_2 label .ham:before{
     top: -4px;
-    /* transform: rotate(45deg); */
+    transition: all 0.3s ease 0s;
 }
 .menu_2 label .ham:after{
     top: 4px;
-    /* transform: rotate(-45deg); */
+    transition: all 0.3s ease 0s;
 }
 
 
@@ -210,7 +226,7 @@ nav .right{
 
 /* ACTIONS */
 input#togglebox:checked ~ .container{
-    transform: translate3d(250px, 0, 0);
+    transform: translate3d(300px, 0, 0);
     height: 100vh;
     overflow: hidden;
 }
@@ -219,7 +235,7 @@ input#togglebox:checked ~ .left-offcanvas{
 }
 
 input#togglebox_r:checked ~ .container{
-    transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
     height: 100vh;
     overflow: hidden;
 }
@@ -267,10 +283,7 @@ input#togglebox_r:checked ~ .right-offcanvas label{
 
 
 /* Right Off-canvas */
-#right_nav{
-    /* position: relative; */
-    /* transform: translate3d(0px, 0, 0); */
-}
+
 
 #right_nav header{
     overflow: hidden;
@@ -279,10 +292,10 @@ input#togglebox_r:checked ~ .right-offcanvas label{
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate3d(250px, 0, 0);
-    width: 250px;
+    transform: translate3d(300px, 0, 0);
+    width: 300px;
     height: 100%;
-    background-color: yellow;
+    background-color: #000;
     transition: transform 0.5s;
     /* z-index: 10; */
 }
@@ -365,5 +378,23 @@ input#togglebox:checked ~ .container .overlay{
     input#togglebox:checked ~ .container .menu_1 label,
     input#togglebox_r:checked ~ .container .menu_2 label{
         background-color: #000;
+    }
+
+    /* Hover on MENU */
+    .menu_1 .ham:hover, .menu_2 .ham:hover,
+    .menu_1 .ham:hover:before, .menu_2 .ham:hover:before,
+    .menu_1 .ham:hover:after, .menu_2 .ham:hover:after
+    {
+        background-color: #c02942;
+    }
+    .menu_1 .ham:hover:before, .menu_2 .ham:hover:before{
+        top: -4px;
+    }
+    .menu_1 .ham:hover:after, .menu_2 .ham:hover:after{
+        top: 4px;
+    }
+    .menu_1 label:hover, .menu_2 label:hover{
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, .2);
     }
 }
