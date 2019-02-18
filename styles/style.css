@@ -15,14 +15,11 @@
 html{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 10px;
-    /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
 }
 body{
     font-family: 'Karla', sans-serif;
-    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-size: 14px;
     line-height: 1.42857143;
-    /* overflow: hidden; */
     overflow-x: hidden;
 }
 .bdy_hide{
@@ -33,20 +30,17 @@ body{
     background-size: cover;
     background-image: url("../images/general/untilsunday-background.jpg")
 }
-
 .container{
     width: 100%;
     position: relative;
-    /* transition: left 6s; */
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s;
-    /* left: 0px; */
 }
-
 input{
     position: absolute;
     visibility: hidden;
 }
+
 /*Left Off-Canvas */
 .left-offcanvas{
     position: absolute;
@@ -57,7 +51,6 @@ input{
     height: 100%;
     background-color: #000;
     transition: transform 0.5s;
-    /* z-index: 10; */
 }
 .left-offcanvas header{
     overflow: hidden;
@@ -65,7 +58,6 @@ input{
 nav .left, nav .right{
     height: 80px;
     width: 80px;
-    /* background-color: red; */
 }
 nav .left{
     float: left;
@@ -76,7 +68,6 @@ nav .right{
 
 .right label{
     display: block;
-    /* background-color: green; */
     height: 100%;
     width: 100%;
 }
@@ -104,12 +95,37 @@ nav .right{
 .right label .close:after{
     transform: rotate(-45deg);
 }
-/* Checked Left Off-Canvas */
+
+
+/* Right Off-canvas */
+
+#right_nav header{
+    overflow: hidden;
+}
+.right-offcanvas{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate3d(320px, 0, 0);
+    width: 320px;
+    height: 100%;
+    background-color: #000;
+    transition: transform 0.5s;
+    padding: 6px 12px;
+    overflow: auto;
+}
+.right-offcanvas .left{
+    float: left;
+    width: auto;
+}
+.right-offcanvas .right{
+    float: right;
+}
+
 
 /* Main header */
 .container .main_header{
     width: 100%;
-    /* background-color: brown; */
     position: absolute;
     overflow: hidden;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -121,16 +137,13 @@ nav .right{
 .menu_1, .logo{
     float: left;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
-    /* background-color: red; */
 }
 
 .menu_2{
     float: right;
-    /* background-color: grey; */
 }
 .menu_1 label{
     display: block;
-    /* background-color: green; */
     height: 100%;
     width: 100%;
 }
@@ -153,7 +166,6 @@ nav .right{
     transition: all 0.3s ease 0s;
 
 }
-
 .menu_1 label .ham:before{
     top: -4px;
     transition: all 0.3s ease 0s;
@@ -184,7 +196,6 @@ nav .right{
 
 .menu_2 label{
     display: block;
-    /* background-color: green; */
     height: 100%;
     width: 100%;
     border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -219,8 +230,11 @@ nav .right{
     transition: all 0.3s ease 0s;
 }
 
-
-
+/* Overlay */
+.overlay{
+    background-color: transparent;
+    transition: background-color 0.5s;
+}
 
 /* ACTIONS */
 input#togglebox:checked ~ .container{
@@ -252,13 +266,11 @@ input#togglebox_r:checked ~ .right-offcanvas label{
 }
 .left-offcanvas .right label .close:hover::before{
     background-color: #c02942;
-    /* left: 0; */
     top: -7px;
     transform: rotate(-45deg);
 }
 .left-offcanvas .right label .close:hover::after{
     background-color: #c02942;
-    /* left: 0; */
     top: 7px;
     transform: rotate(45deg);
 }
@@ -267,49 +279,15 @@ input#togglebox_r:checked ~ .right-offcanvas label{
 }
 .right-offcanvas .right label .close:hover::before{
     background-color: #c02942;
-    /* left: 0; */
     top: -7px;
     transform: rotate(-45deg);
 }
 .right-offcanvas .right label .close:hover::after{
     background-color: #c02942;
-    /* left: 0; */
     top: 7px;
     transform: rotate(45deg);
 }
 
-
-
-/* Right Off-canvas */
-
-
-#right_nav header{
-    overflow: hidden;
-}
-.right-offcanvas{
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate3d(320px, 0, 0);
-    width: 320px;
-    height: 100%;
-    background-color: #000;
-    transition: transform 0.5s;
-    padding: 6px 12px;
-    overflow: auto;
-    /* z-index: 10; */
-}
-.right-offcanvas .left{
-    float: left;
-    width: auto;
-}
-.right-offcanvas .right{
-    float: right;
-}
-.overlay{
-    background-color: transparent;
-    transition: background-color 0.5s;
-}
 input#togglebox_r:checked ~ .container .overlay,
 input#togglebox:checked ~ .container .overlay{
     position: absolute;
@@ -320,6 +298,44 @@ input#togglebox:checked ~ .container .overlay{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* Change menu to a close icon */
+
+input#togglebox:checked ~ .container .menu_1 label .ham,
+input#togglebox_r:checked ~ .container .menu_2 label .ham        {
+    background-color: transparent;
+}
+input#togglebox_r:checked ~ .container .menu_2 label .ham,
+input#togglebox_r:checked ~ .container .menu_2 label .ham:before,
+input#togglebox_r:checked ~ .container .menu_2 label .ham:after{
+    width: 20px;
+    height: 2px;
+}
+
+/* Checked Action */
+input#togglebox:checked ~ .container .menu_1 label .ham:before,
+input#togglebox_r:checked ~ .container .menu_2 label .ham:before{
+    top: 0;
+    transform: rotate(45deg);
+}
+input#togglebox:checked ~ .container .menu_1 label .ham:after,
+input#togglebox_r:checked ~ .container .menu_2 label .ham:after{
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* Hover on MENU */
+.menu_1 .ham:hover, .menu_2 .ham:hover,
+.menu_1 .ham:hover:before, .menu_2 .ham:hover:before,
+.menu_1 .ham:hover:after, .menu_2 .ham:hover:after
+{
+    background-color: #c02942;
+}
+.menu_1 .ham:hover:before, .menu_2 .ham:hover:before{
+    top: -8px;
+}
+.menu_1 .ham:hover:after, .menu_2 .ham:hover:after{
+    top: 8px;
+}
 @media only screen and (min-width: 768px){
     nav .right{
         display: none;
@@ -349,28 +365,7 @@ input#togglebox:checked ~ .container .overlay{
     .menu_2 label .ham:after{
         top: 8px;
     }
-    input#togglebox:checked ~ .container .menu_1 label .ham,
-    input#togglebox_r:checked ~ .container .menu_2 label .ham        {
-        background-color: transparent;
-    }
-    input#togglebox_r:checked ~ .container .menu_2 label .ham,
-    input#togglebox_r:checked ~ .container .menu_2 label .ham:before,
-    input#togglebox_r:checked ~ .container .menu_2 label .ham:after{
-        /* border-radius: 0; */
-        width: 20px;
-        height: 2px;
-    }
-    /* Checked Action */
-    input#togglebox:checked ~ .container .menu_1 label .ham:before,
-    input#togglebox_r:checked ~ .container .menu_2 label .ham:before{
-        top: 0;
-        transform: rotate(45deg);
-    }
-    input#togglebox:checked ~ .container .menu_1 label .ham:after,
-    input#togglebox_r:checked ~ .container .menu_2 label .ham:after{
-        top: 0;
-        transform: rotate(-45deg);
-    }
+
     /* Change label container onclick */
     input#togglebox:checked ~ .container .menu_1 label,
     input#togglebox_r:checked ~ .container .menu_2 label{
@@ -378,12 +373,7 @@ input#togglebox:checked ~ .container .overlay{
     }
 
     /* Hover on MENU */
-    .menu_1 .ham:hover, .menu_2 .ham:hover,
-    .menu_1 .ham:hover:before, .menu_2 .ham:hover:before,
-    .menu_1 .ham:hover:after, .menu_2 .ham:hover:after
-    {
-        background-color: #c02942;
-    }
+
     .menu_1 .ham:hover:before, .menu_2 .ham:hover:before{
         top: -4px;
     }
