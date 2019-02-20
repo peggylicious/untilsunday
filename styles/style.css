@@ -385,3 +385,25 @@ input#togglebox_r:checked ~ .container .menu_2 label .ham:after{
         background-color: rgba(0, 0, 0, .2);
     }
 }
+
+/* .overlay:hover label{
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
+input#togglebox_x:checked ~ .container{
+    transform: translate3d(0, 0, 0);
+}
+input#togglebox_x:checked ~ .right-offcanvas{
+    transform: translate3d(320px, 0, 0);
+}
+input#togglebox_x:checked ~ .container .overlay{
+    height: 0;
+}
+input#togglebox_x:checked ~ .container .menu_2 label{
+    background-color: transparent;
+}
+input#togglebox_x{
+    position: absolute;
+} */
