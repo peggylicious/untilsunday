@@ -414,10 +414,6 @@ input#togglebox_x{
         height: 100vh;
         overflow: hidden;
     }
-    /* .cont-cont{
-        height: 100vh;
-        overflow: scroll;
-    } */
     .container .main_header{
         position: absolute;
         top: 0;
@@ -425,26 +421,11 @@ input#togglebox_x{
         width: 80px;
         height: 100vh;
         border-right: 1px solid rgba(255, 255, 255, 0.2);
-        /* background-color: green; */
-        /* display: none; */
     }
     .main_header .menu_1, .main_header .logo, .main_header .menu_2{
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2)
     }
-    .dodo{
-        height: 100vh;
-        overflow-y: scroll;
-    }
-    /* .main_header .menu_1{
-        position: relative;
-        top: 0;
-        margin-top: 80px;
-    }
-    .main_header .logo{
-        position: absolute;
-        top: 0;
-    } */
     .right-offcanvas{
         transform: translate3d(-320px, 0, 0);
         right: initial;
@@ -456,9 +437,13 @@ input#togglebox_x{
     input#togglebox_r:checked ~ .container{
         transform: translate3d(320px, 0, 0);
     }
-    .hero_container{
+    .container .hero_container{
         float: left;
         width: 50%;
         height: 100vh;
+    }
+    .container .dodo{
+        height: 100vh;
+        overflow-y: scroll;
     }
 }
