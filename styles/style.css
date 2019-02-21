@@ -442,8 +442,15 @@ input#togglebox_x{
         width: 50%;
         height: 100vh;
     }
-    .container .dodo{
+    .container .float_wrapper{
         height: 100vh;
         overflow-y: scroll;
+    }
+
+    .main_header .logo{
+        position: absolute;
+    }
+    .main_header .menu_1{
+        margin-top: 80px;
     }
 }
