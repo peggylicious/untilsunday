@@ -409,7 +409,7 @@ input#togglebox_x{
     position: absolute;
 } */
 
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 1000px){
     body{
         height: 100vh;
         overflow: hidden;
@@ -437,14 +437,21 @@ input#togglebox_x{
     input#togglebox_r:checked ~ .container{
         transform: translate3d(320px, 0, 0);
     }
-    .container .hero_container{
-        float: left;
-        width: 50%;
+    .container{
+        overflow: visible;
         height: 100vh;
     }
     .container .float_wrapper{
         height: 100vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        float: left;
+        box-sizing: content-box;
+        padding-left: 50px;
         overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     .main_header .logo{
@@ -452,5 +459,25 @@ input#togglebox_x{
     }
     .main_header .menu_1{
         margin-top: 80px;
+    }
+    .float_wrapper .main{
+        position: relative;
+    }
+    .float_wrapper .main header h3{
+        height: 100%;
+        background-color: grey;
+        /* float: right; */
+        transform: rotate(180deg);
+    }
+    .float_wrapper .main header{
+        /* background-color: green; */
+        border: 1px solid blue;
+        position: absolute;
+        left: -25px;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(270deg);
+        z-index: 40;
+        /* height: 450px; */
+        width: 450px;
     }
 }
