@@ -94,6 +94,13 @@
     }
 }
 @media only screen and (min-width: 1400px){
+    .hero{
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     .hero_container{
         float: left;
         width: 50%;
