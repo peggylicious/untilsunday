@@ -87,3 +87,17 @@
         border-right: 1px solid #eee;
     }
 }
+@media only screen and (min-width: 992px){
+    .blog header{
+        line-height: normal;
+    }
+    .blog header h4{
+        padding: 0;
+        /* background-color: red; */
+        transform: rotate(90deg);
+        position: relative;
+        top: 80px;
+        color: #fff;
+        border: none;
+    }
+}

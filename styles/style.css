@@ -452,7 +452,7 @@ input#togglebox_x{
         padding-left: 80px;
         overflow-y: scroll;
         overflow-x: hidden;
-        background-color: green;
+        /* background-color: green; */
     }
 
     .main_header .logo{
@@ -461,45 +461,42 @@ input#togglebox_x{
     .main_header .menu_1{
         margin-top: 80px;
     }
-    .float_wrapper .main, .float_wrapper .stories{
+    .float_wrapper .main,
+    .float_wrapper .stories,
+    .float_wrapper .blog,
+    .float_wrapper .client,
+    .float_wrapper .contact{
         position: relative;
     }
     .float_wrapper .main header h3, .float_wrapper .stories header h3{
-        /* height: 100%;
-        background-color: grey; */
-        /* float: right; */
-        /* width: 100%; */
-        /* transform: rotate(180deg); */
     }
-    .float_wrapper .main header{
-        background-color: brown;
-        border: 1px solid blue;
+    .float_wrapper .main header,
+    .float_wrapper .stories header,
+    .float_wrapper .blog > header,
+    .float_wrapper .client > header,
+    .float_wrapper .contact > header{
+        background-color: transparent;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
         position: absolute;
         display: block;
         left: -80px;
-        /* top: 50%; */
-        /* transform: translate(-50%, -50%) rotate(270deg); */
-        /* z-index: 40; */
-        /* height: 80px;
-        line-height: 80px; */
         width: 80px;
-        height: 450px;
+        height: 100%;
     }
     .float_wrapper .stories{
-        /* height: 100vh; */
     }
     .float_wrapper .stories header{
-        border: 1px solid blue;
-        position: absolute;
-        display: block;
-        left: -80px;
-        /* top: 50%; */
-        background-color: purple;
-        /* transform: translate(-50%, -50%); */
-        z-index: 40;
-        /* height: 80px;
-        line-height: 80px; */
-        height: 100%;
-        width: 80px;
+        /* background-color: purple; */
+    }
+    .float_wrapper .blog > header{
+        /* background-color: yellowgreen; */
+    }
+    .float_wrapper .client > header{
+        /* background-color: yellowgreen; */
+    }
+    .float_wrapper .contact > header{
+        /* background-color: yellowgreen; */
     }
 }

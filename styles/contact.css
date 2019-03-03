@@ -107,3 +107,18 @@
         border-right: 1px solid #222;
     }
 }
+@media only screen and (min-width: 992px){
+    .contact header{
+        line-height: normal;
+    }
+    .contact header h4{
+        padding: 0;
+        /* background-color: red; */
+        /* Cause text to rotate */
+        transform: rotate(90deg);
+        display: block;
+        position: relative;
+        top: 80px;
+        color: #fff;
+    }
+}

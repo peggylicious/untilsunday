@@ -7,7 +7,7 @@
 
 }
 
-.client > div{
+.client > .my_clients{
     width: 100%;
     /* background-color: red; */
     overflow: hidden;
@@ -17,7 +17,7 @@
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }
-.client div div{
+.client .my_clients div{
     float: left;
     height: 240px;
     width: 50%;
@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
 }
-.client div div a{
+.client .my_clients div a{
     /* background-color: brown; */
     display: block;
 }
@@ -56,7 +56,7 @@
     display: block;
     color: #fff;
     text-decoration: none;
-    height: 160px;
+    height: 160px !important;
     line-height: 160px;
     text-align: center;
     transition: backgroun-color .6s;
@@ -67,15 +67,27 @@
 }
 
 @media only screen and (min-width: 480px){
-    .client div div{
+    .client .my_clients div{
         width: 33.33%;
     }
 }
 @media only screen and (min-width: 768px){
-    .client div div{
+    .client .my_clients div{
         width: 25%;
     }
-    .blog header h4{
-        padding: 40px 33px;
+}
+@media only screen and (min-width: 992px){
+    .client header{
+        line-height: normal;
+    }
+    .client header h4{
+        padding: 0;
+        /* Cause text to rotate */
+        transform: rotate(90deg);
+        display: block;
+        position: relative;
+        top: 80px;
+        color: #fff;
+        border: none
     }
 }

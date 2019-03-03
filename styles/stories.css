@@ -108,7 +108,7 @@ a.art_link{
     text-align: right;
     color: #c02942;
     border-top: 1px solid #eee;
-
+    width: 100%;
 }
 .connect a{
     text-decoration: none;
@@ -130,7 +130,16 @@ a.art_link{
     }
 }
 @media only screen and (min-width: 992px){
+    .stories header, .blog header{
+        line-height: normal;
+    }
     .stories header h3{
-        padding: 40px 33px;
+        padding: 0;
+        /* background-color: red; */
+        transform: rotate(90deg);
+        position: relative;
+        top: 80px;
+        color: #fff;
+        border: none;
     }
 }
