@@ -409,7 +409,7 @@ input#togglebox_x{
     position: absolute;
 } */
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1400px){
     body{
         height: 100vh;
         overflow: hidden;

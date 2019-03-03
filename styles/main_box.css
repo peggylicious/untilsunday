@@ -18,7 +18,9 @@
 .main header{
     height: 50px;
     line-height: 50px;
-    /* background-color: blue; */
+    background-color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .sliders{
     width: 100%;
@@ -26,6 +28,9 @@
     /* background-color: yellow; */
     overflow: hidden;
     position: relative;
+}
+.slider_1{
+    background-color: #fff;
 }
 .slider_2{
     background-color: #333333;
@@ -129,7 +134,11 @@ section:hover .down{
         width: 33.33%;
     }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 1400px){
+    .main{
+        position: relative;
+        z-index: 50;
+    }
     .main header{
         line-height: normal;
     }
@@ -144,11 +153,11 @@ section:hover .down{
     }
 }
 
-@media only screen and (min-width: 1400px){
-    .main{
+/* @media only screen and (min-width: 1400px){ */
+    /* .main{
         position: relative;
         z-index: 50;
-    }
+    } */
     .main header{
         /* position: absolute;
         top: 0;
@@ -163,4 +172,4 @@ section:hover .down{
         /* transform: rotate(90deg); */
     }
 
-}
+/* } */

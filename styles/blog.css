@@ -87,7 +87,7 @@
         border-right: 1px solid #eee;
     }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 1400px){
     .blog header{
         line-height: normal;
     }
