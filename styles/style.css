@@ -471,8 +471,6 @@ input#togglebox_x{
     .float_wrapper .contact{
         position: relative;
     }
-    .float_wrapper .main header h3, .float_wrapper .stories header h3{
-    }
     .float_wrapper .main header,
     .float_wrapper .stories header,
     .float_wrapper .blog > header,
@@ -487,19 +485,5 @@ input#togglebox_x{
         left: -80px;
         width: 80px;
         height: 100%;
-    }
-    .float_wrapper .stories{
-    }
-    .float_wrapper .stories header{
-        /* background-color: purple; */
-    }
-    .float_wrapper .blog > header{
-        /* background-color: yellowgreen; */
-    }
-    .float_wrapper .client > header{
-        /* background-color: yellowgreen; */
-    }
-    .float_wrapper .contact > header{
-        /* background-color: yellowgreen; */
     }
 }
